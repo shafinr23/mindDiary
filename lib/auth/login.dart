@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:loginp/auth/singup.dart';
-import 'package:loginp/constent/constent.dart';
+import 'package:mindDiary/auth/singup.dart';
+import 'package:mindDiary/constent/constent.dart';
 
-import '../thanksPage.dart';
+import '../pages/thanksPage.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -76,27 +76,7 @@ class LoginPage extends StatelessWidget {
                 fontSize: 20.0,
                 color: Colors.black87,
               ),
-              decoration: InputDecoration(
-                focusedBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Color(0xffE2E6EA), width: 1.0),
-                ),
-                enabledBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: Color(0xffE2E6EA), width: 1.0),
-                ),
-                filled: true,
-                fillColor: Colors.white,
-                border: OutlineInputBorder(
-                  //borderSide: BorderSide.none,
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(10.0),
-                  ),
-                ),
-                hintText: 'Email',
-                hintStyle: TextStyle(
-                  color: Colors.grey,
-                  fontSize: 20.0,
-                ),
-              ),
+              decoration: CDecorationforMailInput,
             ),
           ),
           Padding(
@@ -106,7 +86,7 @@ class LoginPage extends StatelessWidget {
                 fontSize: 20.0,
                 color: Colors.black87,
               ),
-              decoration: CDecorationforInput,
+              decoration: CDecorationforPassInput,
             ),
           ),
           SizedBox(

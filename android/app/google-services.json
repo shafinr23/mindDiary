@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "712337825387",
+    "firebase_url": "https://shafin-bb4e4.firebaseio.com",
+    "project_id": "shafin-bb4e4",
+    "storage_bucket": "shafin-bb4e4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:712337825387:android:cecd9ad6f8f063894bdb2e",
+        "android_client_info": {
+          "package_name": "com.shafinrahman.time.loginp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "712337825387-pefn852coa1bla4de68uoulln1aimruf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.shafinrahman.time.loginp",
+            "certificate_hash": "7e3660d5831eadd469424889a68059a5737575da"
+          }
+        },
+        {
+          "client_id": "712337825387-m6d3m98vubs3qcn0gg3c6unoqqgv790l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD4FWg4vraT_moH9MDF0sH7umeuCXL1nPA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "712337825387-m6d3m98vubs3qcn0gg3c6unoqqgv790l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

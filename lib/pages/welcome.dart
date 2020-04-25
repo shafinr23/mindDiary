@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:loginp/auth/login.dart';
-import 'package:loginp/auth/singup.dart';
+import 'package:mindDiary/auth/login.dart';
+import 'package:mindDiary/auth/singup.dart';
 
-import 'constent/constent.dart';
+import '../constent/constent.dart';
 
 class WelcomePage extends StatelessWidget {
   @override
