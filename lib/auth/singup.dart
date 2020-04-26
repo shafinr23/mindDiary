@@ -20,8 +20,10 @@ class _SingUpPageState extends State<SingUpPage> {
     try {
       final auth = Provider.of<AuthBase>(context, listen: false);
       await auth.regInWithEmailPass(_email, _pass);
-      // Navigator.of(context).pop();
-    } on PlatformException catch (e) {}
+      Navigator.of(context).pop();
+    } on PlatformException catch (e) {
+      print(e);
+    }
   }
 
   _buildContent(BuildContext context) {

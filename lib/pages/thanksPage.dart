@@ -1,18 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mindDiary/constent/constent.dart';
-import 'package:mindDiary/services/auth.dart';
-import 'package:provider/provider.dart';
+import 'package:mindDiary/pages/home.dart';
 
 class ThankYouPage extends StatelessWidget {
-  Future<void> _singOut(BuildContext context) async {
-    try {
-      final auth = Provider.of<AuthBase>(context, listen: false);
-      await auth.singOut();
-    } catch (e) {
-      print(e.toString());
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,7 +44,11 @@ class ThankYouPage extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                onPressed: () => _singOut(context),
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => HomePage()),
+                  );
+                },
               ),
             ),
           ],
