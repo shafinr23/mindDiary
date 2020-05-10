@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:mindDiary/pages/lading_page.dart';
 import 'package:mindDiary/services/auth.dart';
+import 'package:mindDiary/services/lading_page.dart';
 import 'package:provider/provider.dart';
 
 void main() => runApp(MyApp());

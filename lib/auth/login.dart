@@ -1,10 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:mindDiary/auth/singup.dart';
 import 'package:mindDiary/constent/constent.dart';
+import 'package:mindDiary/services/auth.dart';
+import 'package:provider/provider.dart';
 
-import '../pages/thanksPage.dart';
+class LoginPage extends StatefulWidget {
+  @override
+  _LoginPageState createState() => _LoginPageState();
+}
 
-class LoginPage extends StatelessWidget {
+class _LoginPageState extends State<LoginPage> {
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passController = TextEditingController();
+  String get _email => _emailController.text;
+  String get _pass => _passController.text;
+
+  _submit() async {
+    try {
+      final auth = Provider.of<AuthBase>(context, listen: false);
+      await auth.singInWithEmailPass(_email, _pass);
+      Navigator.of(context).pop();
+    } on PlatformException catch (e) {
+      print(e);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -72,21 +93,34 @@ class LoginPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(15.0),
             child: TextField(
+              autocorrect: false,
+              keyboardType: TextInputType.emailAddress,
+              textInputAction: TextInputAction.next,
+              controller: _emailController,
               style: TextStyle(
                 fontSize: 20.0,
                 color: Colors.black87,
               ),
               decoration: CDecorationforMailInput,
+              onChanged: (email) {
+                _updateState;
+              },
             ),
           ),
           Padding(
             padding: const EdgeInsets.fromLTRB(15.0, 0.0, 15.0, 5.0),
             child: TextField(
+              controller: _passController,
+              textInputAction: TextInputAction.done,
               style: TextStyle(
                 fontSize: 20.0,
                 color: Colors.black87,
               ),
               decoration: CDecorationforPassInput,
+              obscureText: true,
+              onChanged: (pass) {
+                _updateState;
+              },
             ),
           ),
           SizedBox(
@@ -106,9 +140,7 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
               onPressed: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(builder: (context) => ThankYouPage()),
-                );
+                _submit();
               },
             ),
           ),
@@ -140,5 +172,9 @@ class LoginPage extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  void _updateState() {
+    setState(() {});
   }
 }

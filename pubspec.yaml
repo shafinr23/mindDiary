@@ -25,6 +25,10 @@ dependencies:
   cupertino_icons: ^0.1.2
   provider: ^4.0.5
   firebase_auth: ^0.16.0
+  cloud_firestore: ^0.12.9+5
+  pdf: ^1.7.1
+  flutter_full_pdf_viewer: ^1.0.6
+  path_provider: ^1.6.7
 
 dev_dependencies:
   flutter_test:
@@ -72,3 +76,21 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+  fonts:
+    - family: Rubik
+      fonts:
+        - asset: assets/fonts/rubik/Rubik-Regular.ttf
+        - asset: assets/fonts/rubik/Rubik-Medium.ttf
+        - asset: assets/fonts/rubik/Rubik-Bold.ttf
+
+    - family: Iconfont
+      fonts:
+        - asset: assets/fonts/icofont/icofont.ttf
+
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/roboto/Roboto-Regular.ttf
+
+    - family: Gotham
+      fonts:
+        - asset: assets/fonts/gotham/GothamThin.otf
